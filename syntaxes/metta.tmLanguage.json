@@ -1,0 +1,63 @@
+
+{
+    "scopeName": "source.metta",
+    "fileTypes": ["metta"],
+    "patterns": [
+      {
+        "include": "#comments"
+      },
+      {
+        "include": "#strings"
+      },
+      {
+        "include": "#keywords"
+      },
+      {
+        "include": "#operators"
+      }
+    ],
+    "repository": {
+      "comments": {
+        "patterns": [
+          {
+            "match": "(\\/\\/).*$",
+            "name": "comment.line.double-slash"
+          },
+          {
+            "begin": "(/\\*)",
+            "end": "(\\*/)",
+            "name": "comment.block"
+          }
+        ]
+      },
+      "strings": {
+        "patterns": [
+          {
+            "match": "'(?:[^'\\\\]|\\\\.)*'",
+            "name": "string.single-quote"
+          },
+          {
+            "match": "\"(?:[^\"\\\\]|\\\\.)*\"",
+            "name": "string.double-quote"
+          }
+        ]
+      },
+      "keywords": {
+        "patterns": [
+          {
+            "match": "\\b(Type|($[a-z|A-Z]*))\\b",
+            "name": "keyword"
+          }
+        ]
+      },
+      "operators": {
+        "patterns": [
+          {
+            "match": "\\b(:|+|*|/|-|->|=)\\b",
+            "name": "operator"
+          }
+        ]
+      }
+    }
+  }
+  
