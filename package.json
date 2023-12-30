@@ -1,7 +1,24 @@
 {
   "name": "metta-syntax-highlighter",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a syntax highlighter for the metta language",
+  "publisher": "NSG",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+ 
+  "activationEvents": [
+    "onLanguage:metta" 
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "source.metta",
+        "path": "./src/metta.tmLanguage",
+        "injectionSelector": "L:source.metta"
+      }
+    ]
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

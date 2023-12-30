@@ -1,4 +1,3 @@
-
 {
     "scopeName": "source.metta",
     "fileTypes": ["metta"],
@@ -14,6 +13,16 @@
       },
       {
         "include": "#operators"
+      },
+      {
+        "name": "parentheses",
+        "match": "\\(|\\)",
+        "captures": {
+          "0": { "name": "punctuation.parenthesis" }
+        },
+        "style": {
+          "foreground": "#008000"  
+        }
       }
     ],
     "repository": {
